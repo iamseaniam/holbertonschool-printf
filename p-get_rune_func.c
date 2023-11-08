@@ -1,7 +1,20 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "main.h"
+int putchar_file(char c)
+{
+	char buffer[1];
+	int bytes_written;
+	buffer[0] = c; 
+	bytes_written = write(1, &c, 1);
+	if (bytes_written == -1)
+	{
+		write(STDERR_FILENO, "Write error\n", 12);
+	}
+	return (bytes_written == 1) ? 1 : -1;
+}
 /**
+
  *rune_d - Print an integer value.
  *@value: The integer value to be printed.
  *Return: Always returns 0.
