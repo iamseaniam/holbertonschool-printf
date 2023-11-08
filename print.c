@@ -64,7 +64,7 @@ int _printf(const char *format, ...)
 				fputs(str, stdout);
 				count += strlen(str);
 			}
-			else if (*ptr == 'b')
+			/*else if (*ptr == 'b')
 			{
 				int value = va_arg(args, int);
 				count += rune_b(value);
@@ -74,6 +74,7 @@ int _printf(const char *format, ...)
 				putchar('%');
 				count++;
 			}
+			*/
 		}
 		else
 		{
