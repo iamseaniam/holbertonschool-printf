@@ -69,10 +69,10 @@ int rune_b(int value)
 	int binaryNum[1000];
 
 	int i = 0;
-	while (n > 0)
+	while (value > 0)
 	{
-		binaryNum[i] = n % 2;
-		n = n / 2;
+		binaryNum[i] = value % 2;
+		value = value / 2;
 		i++;
 	}
 }
