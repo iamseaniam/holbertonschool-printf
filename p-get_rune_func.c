@@ -1,22 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "main.h"
-
-int putchar_file(char c)
-{
-/*	char buffer[1];*/
-	int bytes_written;
-
-/*	buffer[0] = c; */
-
-	bytes_written = write(1, &c, 1);
-
-	if (bytes_written == -1)
-	{
-		write(STDERR_FILENO, "Write error\n", 12);
-	}
-	return (bytes_written == 1) ? 1 : -1;
-}
 /**
  *rune_d - Print an integer value.
  *@value: The integer value to be printed.
@@ -32,7 +16,7 @@ int rune_d(int value)
 
 	for (i = 0; buffer[i] != '\0'; i++)
 	{
-		count += putchar_file(buffer[i]);
+		count += putchar(buffer[i]);
 	}
 	return count;
 }
@@ -43,7 +27,7 @@ int rune_d(int value)
  */
 int rune_c(int value)
 {
-	putchar_file(value);
+	putchar(value);
 	return (0);
 }
 
@@ -60,7 +44,7 @@ int rune_s(int value)
 	int length = strlen(str);
 	for (i = 0; i < length; i++)
 	{
-		putchar_file(str[i]);
+		putchar(str[i]);
 	}
 	return (length);
 }
@@ -76,7 +60,7 @@ int rune_b(int value)
 		i++;
 	}
 	for (j = i - 1; j >= 0; j--)
-		putchar_file("rune_d" binaryNum[j]);
+		putchar("rune_d" binaryNum[j]);
 }
 /**
  *get_rune_func - Get a function pointer based on a character.
