@@ -1,0 +1,61 @@
+manpage for _printf
+.TH man 3 '07 November 2023" "1.0" "_printf man page"
+.SH NAME
+_printf \- custom printf implementation
+
+.SH SYNOPSIS
+
+    #include "main.h"
+
+    int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+
+_printf() is a custom implementation of the `printf` function that constructs formatted output to stdout.
+
+The output of _printf() is formatted by a format string that specifies how arguments are to be handled.
+
+.SS Format of the format string
+
+The format string of _printf() is a character string, composed of zero or more directives - ordinary characters (all aside from '%') are copied unchanged to the output stream, and conversion specifications fetch a subsequent argument. A conversion specification is introduced by the character '%' and ends with a conversion specifier.
+
+The arguments must correspond properly with the conversion specifier. The arguments are used in the order given, where each conversion specifier asks for the next argument in the list.
+
+.SS Conversion specifiers
+
+A character that specifies the type of conversion to be applied. The conversion specifiers and their meanings are:
+
+.B
+.IP "d, i"
+The int argument is converted to decimal notation.
+.B
+.IP c
+The int argument is converted to an unsigned char, and the resulting character is written.
+.B
+.IP s
+The const char * argument is expected to be a pointer to an array of character type (that is, a pointer to a string). Characters from the array are written up to, but not including, a terminating null byte ('\0').
+.B
+.IP %
+A '%' is written. No argument is converted. The complete conversion specification is '%%'.
+
+.SH RETURN VALUE
+
+If successful, _printf() returns the number of characters printed, excluding the null byte character used to end output.
+
+If an output error is encountered, a negative value is returned instead.
+
+.SH EXAMPLE
+
+To print a simple string ending with a newline:
+
+.IP #include "main.h"
+.IP _printf("%s/n", "Hello world!");
+
+.SH SEE ALSO
+
+printf(1), printf(3), puts(3), scanf(3)
+
+.SH AUTHORS
+
+Sean Montgomery and Jesse Brumley
+
