@@ -14,7 +14,7 @@ int putchar_file(char c);
 int rune_d(int); /* %d or %i: printing signed decimal integers*/
 int rune_c(int); /* %c: printing characters*/
 int rune_s(int); /* %s: printing strings*/
-void rune_b(int);
+int rune_b(int);
 int (*get_rune_func(char *s))(int);
 int _printf(const char *format, ...); /* Prototype for Print.c */
 #endif

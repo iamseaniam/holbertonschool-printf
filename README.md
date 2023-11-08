@@ -16,32 +16,32 @@ This is a custom implementation of the <span style="color:blue">`printf`</span> 
 
 ## List of Format Specifiers
 
-### <span style="color:green">`%s`</span> - Format / Print Strings
+### `%s` - Format / Print Strings
 
 This format specifier is used for formatting and printing strings.
 
-### <span style="color:orange">`%c`</span> - Format / Print Characters
+### `%c` - Format / Print Characters
 
 This format specifier is used for formatting and printing characters.
 
-### <span style="color:purple">`%i`</span> - Format / Print Integers
+###`%i` - Format / Print Integers
 
 This format specifier is used for formatting and printing integers.
 
-### <span style="color:red">`%d`</span> - Format / Print Decimal Numbers
+### `%d` - Format / Print Decimal Numbers
 
 This format specifier is used for formatting and printing decimal numbers.
 
 ## List of Headers
 
 - `#include "main.h"`
-- `#include <span style="color:blue">stdio.h</span>`
-- `#include <span style="color:blue">stdlib.h</span>`
-- `#include <span style="color:blue">string.h</span>`
-- `#include <span style="color:blue">stdarg.h</span>`
-- `#include <span style="color:blue">unistd.h</span>`
-- `#include <span style="color:blue">limits.h</span>`
-- `#include <span style="color:blue">stddef.h</span>`
+- `#include <stdio.h>`
+- `#include <stdlib.h>`
+- `#include <string.h>`
+- `#include <stdarg.h>`
+- `#include <unistd.h>`
+- `#include <limits.h>`
+- `#include <>stddef.h>`
 
 ## Prototypes
 

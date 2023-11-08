@@ -64,7 +64,7 @@ int rune_s(int value)
 	}
 	return (length);
 }
-void rune_b(int value);
+int rune_b(int value);
 {
 	int binaryNum[1000];
 
