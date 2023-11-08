@@ -3,9 +3,9 @@
 #include "main.h"
 int putchar_file(char c)
 {
-	char buffer[1];
+	/*char buffer[1];*/
 	int bytes_written;
-	buffer[0] = c; 
+	/*buffer[0] = c; */
 	bytes_written = write(1, &c, 1);
 	if (bytes_written == -1)
 	{
@@ -29,7 +29,7 @@ int rune_d(int value)
 
 	for (i = 0; buffer[i] != '\0'; i++)
 	{
-		count += putchar(buffer[i]);
+		count += putchar_file(buffer[i]);
 	}
 	return count;
 }
