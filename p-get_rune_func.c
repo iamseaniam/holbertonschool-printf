@@ -67,7 +67,7 @@ int rune_s(int value)
 int rune_b(int value)
 {
 	int binaryNum[1000];
-
+	int j;
 	int i = 0;
 	while (value > 0)
 	{
@@ -75,6 +75,8 @@ int rune_b(int value)
 		value = value / 2;
 		i++;
 	}
+	for (j = i - 1; j >= 0; j--)
+		putchar_file("rune_d" binaryNum[j]);
 }
 /**
  *get_rune_func - Get a function pointer based on a character.
