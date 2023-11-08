@@ -64,6 +64,18 @@ int rune_s(int value)
 	}
 	return (length);
 }
+void rune_b(int value);
+{
+	int binaryNum[1000];
+
+	int i = 0;
+	while (n > 0)
+	{
+		binaryNum[i] = n % 2;
+		n = n / 2;
+		i++;
+	}
+}
 /**
  *get_rune_func - Get a function pointer based on a character.
  *@s: The character to look up in the function pointer array.
@@ -76,6 +88,7 @@ int (*get_rune_func(char *s))(int)
 		{"i", rune_d},
 		{"c", rune_c},
 		{"s", rune_s},
+		{"b", rune_b},
 		{NULL, NULL}
 	};
 
