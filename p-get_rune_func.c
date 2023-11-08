@@ -76,7 +76,7 @@ int (*get_rune_func(char *s))(int)
 		{"i", rune_d},
 		{"c", rune_c},
 		{"s", rune_s},
-		{"b", rune_b},
+		/*{"b", rune_b},*/
 		{NULL, NULL}
 	};
 
